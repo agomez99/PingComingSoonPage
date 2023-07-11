@@ -1,22 +1,20 @@
 function isValidEmailFormat(emailAddress) {
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(emailAddress) && emailAddress !== "";
   }
   
   function signUp() {
-    var email = document.getElementById("email").value;
-    var errorDisplay = document.getElementById("error-display");
-    var successDisplay = document.getElementById("success-display");
+    const email = document.getElementById("email").value;
+    const errorDisplay = document.getElementById("error-display");
+    const successDisplay = document.getElementById("success-display");
   
     if (!isValidEmailFormat(email)) {
-      // Show error message
       errorDisplay.classList.add("visible");
       errorDisplay.textContent = "Please provide a valid email address";
-    
+      document.getElementById("email").style.border = "1px solid red";
       return;
     }
   
-    // Clear error message
     errorDisplay.classList.remove("visible");
     errorDisplay.textContent = "";
   
@@ -24,17 +22,18 @@ function isValidEmailFormat(emailAddress) {
   
     document.getElementById("email").value = "";
   
-    // Show success message
-    successDisplay.textContent = "Successfully signed up " + email + " for our newsletter!";
+    const message = "Successfully signed up newsletter for ";
+    successDisplay.style.fontWeight = "bold";
+    successDisplay.textContent = message + email;
     successDisplay.classList.add("visible");
   }
   
   function clearError() {
-    var errorDisplay = document.getElementById("error-display");
-    var successDisplay = document.getElementById("success-display");
+    const errorDisplay = document.getElementById("error-display");
+    const successDisplay = document.getElementById("success-display");
   
-    // Clear error and success messages
     errorDisplay.textContent = "";
     successDisplay.textContent = "";
+    document.getElementById("email").style = "";
   }
   
