@@ -15,11 +15,11 @@ body {
   align-content: center;
   align-items: center;
   justify-content: center;
-  height:100vh;
+  margin-top: 5%;
 }
 
 main {
-  padding: 1rem;
+  padding: 1.2rem;
   font-family: 'Libre Franklin', sans-serif;
 }
 .header-span{
@@ -27,63 +27,128 @@ main {
   color:black;
 }
 .header {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color:  hsl(0, 0%, 59%);
 }
 .sub-heading{
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .input-section{
   display: inline-flex;
   align-content: center;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
+  margin-bottom: 8%;
+  margin-top:3%;
 }
 .input-container{
   display: block;
 }
 .input{
   border-radius: 25px;
-  height:45px;
-  color:hsl(0, 0%, 59%);
-  border-color: hsl(0, 0%, 59%);
+  height:55px;
+  border-color: hsl(223, 100%, 88%);
   border-width: 1px;
+  width: 400px;
+  padding-left: 5%;
+  margin-right: 10%;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:hsl(223, 100%, 88%);
+  opacity: 1; /* Firefox */
+}
+
 .header-section{
   margin-top: 5%;
 }
 .notify-btn{
-  background-color: #4d7bf3;
+  background-color: hsl(223, 87%, 63%);
   color:white;
   border-radius: 25px;
-  width:150px;
-  height:45px;
+  width:210px;
+  height:55px;
   border:none;
+  margin-left: 10%;
+  position:relative;
+  box-shadow: -2px 16px 37px 1px rgba(216,216,252,1);
 }
-.image{
-  height:100%;
-  width:auto;
+
+.notify-btn:hover{
+  background-color: #7195f5
+}
+.main-image{
+ height:370px;
+ width:auto
 }
 
 .icon-wrapper{
   border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid rgb(228, 228, 228);
+  padding:3px;
+  border: 1px solid rgb(247, 231, 231);
   font-size: 1rem;
   width: 30px;
   height: 30px;
+  margin-right:10px;
 }
 .icon-wrapper i {
-  color: #4d7bf3;
+  color: hsl(223, 87%, 63%);
 }
+.icon-wrapper:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: #7195f5;
+}
+
+
+
 .copyright{
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color:hsl(0, 0%, 59%);
 }
-.error-display{
+#error-display{
   color:red;
   font-size: 0.8rem;
-  
+  font-size: 0.8rem;
+}
+
+#success-display{
+  color: rgb(60, 226, 60);
+  font-size: 1rem;
+
+}
+
+.icons-container{
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .logo{
+    height:20px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+  .header{
+    font-size: 1.5rem;
+  }
+  .sub-heading{
+    font-size: 0.9rem;
+  }
+  .main-image{
+    width: 100%;
+    height: auto;
+   }
+   
+   .input-section{
+    display: block;
+   }
+   .input{
+    height:50px;
+    width: 100%;
+    margin-top: 10%;
+ 
+  }
+   .notify-btn{
+    width: 100%;
+    height:50px;
+    margin: 5% 0% 10% 0%;
+
+  }
 }
